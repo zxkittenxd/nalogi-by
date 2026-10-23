@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Калькулятор налогов Беларуси 2026 — зарплата, НПД, сверхдоходы</title>
+<meta name="description" content="Онлайн-калькулятор подоходного налога и зарплаты в Беларуси на 2026 год: расчёт netto с gross, налог на профессиональный доход (НПД), прогрессивная шкала 13/25/30% для сверхдоходов. Актуальные вычеты: 216 руб, 63 руб на ребёнка.">
+<meta name="keywords" content="калькулятор зарплаты беларусь, подоходный налог 2026, налог на сверхдоходы, нпд калькулятор, ндфл беларусь, рассчитать зарплату от gross, вычеты 2026">
+<link rel="canonical" href="https://zxkittenxd.github.io/nalogi-by/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Калькулятор налогов Беларуси 2026">
+<meta property="og:description" content="Зарплата net↔gross, НПД для самозанятых, налог на сверхдоходы 13/25/30%. Актуально на 2026 год.">
+<meta property="og:url" content="https://zxkittenxd.github.io/nalogi-by/">
+<meta property="og:locale" content="ru_RU">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e7a3d'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EBr%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Калькулятор налогов Беларуси 2026",
+  "url": "https://zxkittenxd.github.io/nalogi-by/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BYN" },
+  "description": "Расчёт подоходного налога с зарплаты, налога на профессиональный доход (НПД) и налога на сверхдоходы по прогрессивной шкале 13/25/30% в Республике Беларусь на 2026 год."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Какие налоги удерживаются с зарплаты в Беларуси в 2026 году?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Работник уплачивает взнос в ФСЗН — 1% от начисленной зарплаты, и подоходный налог — 13% с налоговой базы (доход минус 1% ФСЗН минус положенные вычеты). Наниматель дополнительно платит 34% в ФСЗН и 6% в Белгосстрах — эти суммы из зарплаты работника не удерживаются." }
+    },
+    {
+      "@type": "Question",
+      "name": "Какой стандартный налоговый вычет в 2026 году?",
+      "acceptedAnswer": { "@type": "Answer", "text": "216 белорусских рублей в месяц — при доходе, не превышающем 1 308 руб. в месяц. На каждого ребёнка до 18 лет и иждивенца — 63 руб. в месяц; для одиноких родителей, вдов (вдовцов) и родителей с двумя и более детьми — 120 руб. в месяц на каждого ребёнка." }
+    },
+    {
+      "@type": "Question",
+      "name": "Что такое налог на сверхдоходы в 2026 году?",
+      "acceptedAnswer": { "@type": "Answer", "text": "С 1 января 2026 года действует прогрессивная шкала: 13% с годового дохода до 350 000 руб., 25% с суммы от 350 001 до 600 000 руб. и 30% с суммы свыше 600 000 руб. В течение года наниматель удерживает 13%, а при превышении порога нужно подать декларацию до 31 марта 2027 года и доплатить налог до 1 июня 2027 года." }
+    },
+    {
+      "@type": "Question",
+      "name": "Как работает налог на профессиональный доход (НПД)?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Ставка 10% с доходов от физлиц и иностранных заказчиков; 20% — с доходов от белорусских организаций и ИП сверх годового лимита 60 000 руб. Для получателей пенсии ставки фактически 4% и 8%. С 1 июля 2026 года установлен минимальный платёж — 45 руб. в месяц (18 руб. для пенсионеров), даже если дохода не было." }
+    },
+    {
+      "@type": "Question",
+      "name": "Облагается ли зарплата резидентов ПВТ по прогрессивной шкале?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Нет. Доходы по трудовым договорам от резидентов Парка высоких технологий облагаются подоходным налогом по ставке 13% и исключены из расчёта сверхдоходов." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="./">НАЛОГИ<span>·</span>BY</a>
+    <nav class="header-nav">
+      <a href="#calc">Калькулятор</a>
+      <a href="#spravka">Справка</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <span class="badge-year">2026</span>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <h1>Калькулятор налогов Беларуси&nbsp;2026</h1>
+    <p class="hero-sub">Зарплата <b>gross&nbsp;→&nbsp;net</b> и обратно · налог на профессиональный доход (<b>НПД</b>) · прогрессивная шкала <b>13&nbsp;/&nbsp;25&nbsp;/&nbsp;30%</b> для сверхдоходов. Все ставки и вычеты — по Налоговому кодексу РБ с изменениями от 01.01.2026.</p>
+  </section>
+
+  <section id="calc" class="card calc-card">
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="salary" role="tab">💼 Зарплата</button>
+      <button class="tab" data-tab="npd" role="tab">🧾 НПД (самозанятые)</button>
+      <button class="tab" data-tab="super" role="tab">📈 Сверхдоходы</button>
+    </div>
+
+    <!-- ================= ЗАРПЛАТА ================= -->
+    <div class="tab-panel active" id="panel-salary">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <div class="direction-toggle" id="salary-direction">
+            <button class="dir-btn active" data-dir="g2n">Gross → Net</button>
+            <button class="dir-btn" data-dir="n2g">Net → Gross</button>
+          </div>
+
+          <label class="field">
+            <span class="field-label" id="salary-amount-label">Начисленная зарплата (gross), BYN</span>
+            <div class="input-wrap">
+              <input type="number" id="salary-amount" value="2000" min="0" step="10" inputmode="decimal">
+              <span class="input-suffix">руб.</span>
+            </div>
+          </label>
+
+          <div class="chips" id="salary-chips">
+            <button class="chip" data-v="800">800</button>
+            <button class="chip" data-v="1300">1300</button>
+            <button class="chip" data-v="2000">2000</button>
+            <button class="chip" data-v="3000">3000</button>
+            <button class="chip" data-v="5000">5000</button>
+          </div>
+
+          <div class="field">
+            <span class="field-label">Дети до 18 лет / иждивенцы</span>
+            <div class="stepper" id="kids-stepper">
+              <button type="button" class="step-btn" data-d="-1">−</button>
+              <span class="step-val" id="kids-val">0</span>
+              <button type="button" class="step-btn" data-d="1">+</button>
+            </div>
+          </div>
+
+          <label class="check">
+            <input type="checkbox" id="kids-big">
+            <span>Одинокий родитель / два и более детей / ребёнок-инвалид — вычет <b>120 руб.</b> на ребёнка вместо 63 руб.</span>
+          </label>
+
+          <div class="note" id="salary-note"></div>
+        </div>
+
+        <div class="calc-results">
+          <div class="result-main">
+            <span class="result-label" id="salary-main-label">На руки (net)</span>
+            <span class="result-value" id="salary-net">—</span>
+            <span class="result-sub" id="salary-net-year"></span>
+          </div>
+          <table class="breakdown" id="salary-breakdown"></table>
+          <div class="warn hidden" id="salary-superincome-warn">
+            ⚠️ При таком доходе годовая сумма превышает <b>350 000 руб.</b> — по итогам года возможна доплата по ставкам 25–30%. <a href="#" data-goto="super">Рассчитать сверхдоход →</a>
+          </div>
+          <div class="result-actions">
+            <button class="btn-ghost" id="copy-salary">📋 Скопировать расчёт</button>
+            <button class="btn-ghost" onclick="window.print()">🖨 Печать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= НПД ================= -->
+    <div class="tab-panel" id="panel-npd">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <label class="field">
+            <span class="field-label">Доход за месяц, BYN</span>
+            <div class="input-wrap">
+              <input type="number" id="npd-amount" value="1500" min="0" step="50" inputmode="decimal">
+              <span class="input-suffix">руб.</span>
+            </div>
+          </label>
+
+          <div class="field">
+            <span class="field-label">От кого получен доход</span>
+            <div class="radio-list">
+              <label class="radio"><input type="radio" name="npd-src" value="phys" checked><span>Физлица и иностранные заказчики — всегда 10%</span></label>
+              <label class="radio"><input type="radio" name="npd-src" value="org"><span>Белорусские организации и ИП — 10%, а сверх 60 000 руб./год — 20%</span></label>
+            </div>
+          </div>
+
+          <label class="check">
+            <input type="checkbox" id="npd-pension">
+            <span>Я получатель пенсии — фактические ставки <b>4% / 8%</b>, минимальный платёж 18 руб.</span>
+          </label>
+
+          <div class="note">НПД уплачивается через приложение «Налог на профессиональный доход»: чеки формируются в приложении, налоговая сама считает налог и присылает извещение до 10-го числа следующего месяца. Декларации не нужны.</div>
+        </div>
+
+        <div class="calc-results">
+          <div class="result-main">
+            <span class="result-label">НПД к уплате за месяц</span>
+            <span class="result-value" id="npd-tax">—</span>
+            <span class="result-sub" id="npd-sub"></span>
+          </div>
+          <table class="breakdown" id="npd-breakdown"></table>
+          <div class="warn" id="npd-min-warn">
+            ❗ С 1 июля 2026 года действует <b>минимальный платёж НПД — 45 руб. в месяц</b> (18 руб. для пенсионеров). Он уплачивается, даже если расчётный налог меньше или дохода не было вовсе.
+          </div>
+          <div class="result-actions">
+            <button class="btn-ghost" id="copy-npd">📋 Скопировать расчёт</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= СВЕРХДОХОДЫ ================= -->
+    <div class="tab-panel" id="panel-super">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <label class="field">
+            <span class="field-label">Совокупный доход за 2026 год, BYN</span>
+            <div class="input-wrap">
+              <input type="number" id="super-amount" value="500000" min="0" step="10000" inputmode="decimal">
+              <span class="input-suffix">руб.</span>
+            </div>
+          </label>
+
+          <div class="chips" id="super-chips">
+            <button class="chip" data-v="300000">300 000</button>
+            <button class="chip" data-v="400000">400 000</button>
+            <button class="chip" data-v="700000">700 000</button>
+            <button class="chip" data-v="1000000">1 000 000</button>
+          </div>
+
+          <label class="check">
+            <input type="checkbox" id="super-dividend">
+            <span>Доход — дивиденды (шкала 13% / 25%, ставка 30% не применяется)</span>
+          </label>
+
+          <div class="note">
+            Учитываются: зарплата и премии, доходы по договорам подряда и авторским, аренда, проценты по займам и др. (п. 8-2 и 8-3 ст. 199 НК). <b>Не учитываются</b>: доходы резидентов ПВТ по трудовым договорам, доходы, облагаемые по ставкам 0/6/9/10%, пособия ФСЗН (кроме больничных), страховые выплаты.
+          </div>
+        </div>
+
+        <div class="calc-results">
+          <div class="result-main">
+            <span class="result-label">Итого налог за год</span>
+            <span class="result-value" id="super-total">—</span>
+            <span class="result-sub" id="super-sub"></span>
+          </div>
+          <table class="breakdown" id="super-breakdown"></table>
+          <div class="warn hidden" id="super-doplate-warn"></div>
+          <div class="result-actions">
+            <button class="btn-ghost" id="copy-super">📋 Скопировать расчёт</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= СПРАВКА ================= -->
+  <section id="spravka" class="content-block">
+    <h2>Как рассчитывается подоходный налог в Беларуси в 2026 году</h2>
+    <p>С заработной платы работника удерживаются два платежа: <b>взнос в ФСЗН — 1%</b> и <b>подоходный налог — 13%</b>. Формула расчёта «на руки»:</p>
+    <p class="formula">net = gross − gross × 1% − (gross − gross × 1% − вычеты) × 13%</p>
+    <p>Наниматель сверх зарплаты платит 34% в ФСЗН и 6% в Белгосстрах — на сумму «на руки» это не влияет, но именно поэтому рабочая сила стоит работодателю примерно в 1,47 раза больше начисленной зарплаты.</p>
+
+    <h3>Стандартные налоговые вычеты в 2026 году</h3>
+    <table class="info-table">
+      <thead><tr><th>Вычет</th><th>Размер, руб./мес.</th><th>Условие</th></tr></thead>
+      <tbody>
+        <tr><td>Стандартный («на себя»)</td><td>216</td><td>доход не превышает 1 308 руб. в месяц</td></tr>
+        <tr><td>На ребёнка до 18 лет / иждивенца</td><td>63</td><td>на каждого ребёнка</td></tr>
+        <tr><td>На ребёнка (повышенный)</td><td>120</td><td>одинокий родитель, вдова/вдовец, приёмный родитель, опекун, родители с 2+ детьми или ребёнком-инвалидом</td></tr>
+        <tr><td>Для отдельных категорий</td><td>306</td><td>инвалиды I и II группы, инвалиды с детства, дети-сироты и др.</td></tr>
+        <tr><td>Молодым специалистам</td><td>860</td><td>при распределении / направлении на работу</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Прогрессивная шкала: налог на сверхдоходы</h3>
+    <p>С 1 января 2026 года (Закон № 127-З от 30.12.2025) введена трёхступенчатая шкала по годовому доходу:</p>
+    <table class="info-table">
+      <thead><tr><th>Годовой доход</th><th>Ставка</th></tr></thead>
+      <tbody>
+        <tr><td>до 350 000 руб. включительно</td><td>13%</td></tr>
+        <tr><td>от 350 001 до 600 000 руб.</td><td>25% с суммы превышения</td></tr>
+        <tr><td>свыше 600 000 руб.</td><td>30% с суммы превышения</td></tr>
+      </tbody>
+    </table>
+    <p>Повышенная ставка применяется <b>только к сумме превышения</b>, а не ко всему доходу. В течение года наниматель удерживает 13% как обычно. Если совокупный годовой доход превысил 350 000 руб., нужно подать декларацию <b>до 31 марта 2027 года</b> и уплатить доплату <b>до 1 июня 2027 года</b>. Важно: к доходам, облагаемым по ставкам 25% и 30%, стандартные, социальные и имущественные вычеты (ст. 208–212 НК) не применяются. Для дивидендов действует отдельная шкала: 13% до 350 000 руб. и 25% свыше — без ставки 30%.</p>
+
+    <h3>НПД для самозанятых</h3>
+    <p>Налог на профессиональный доход заменяет подоходный налог, единый налог и взносы в ФСЗН. Ставки: <b>10%</b> — с доходов от физлиц и иностранных заказчиков; <b>20%</b> — с доходов от белорусских организаций и ИП сверх 60 000 руб. нарастающим итогом за год. Получатели пенсии фактически платят <b>4% и 8%</b>. С <b>1 июля 2026 года</b> введён минимальный платёж — <b>45 руб. в месяц</b> (18 руб. для пенсионеров): его придётся платить даже в месяцы без выручки, поэтому при нерегулярном доходе НПД может быть невыгоден — «точка безубыточности» при ставке 10% составляет 450 руб. дохода в месяц.</p>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" class="content-block">
+    <h2>Частые вопросы</h2>
+
+    <details class="faq-item">
+      <summary>Какие налоги удерживаются с зарплаты в 2026 году?</summary>
+      <p>Взнос в ФСЗН — 1% и подоходный налог — 13% с базы за вычетом 1% и положенных вычетов. Например, при зарплате 2 000 руб. без вычетов: ФСЗН — 20 руб., подоходный — (2 000 − 20) × 13% = 257,40 руб., на руки — 1 722,60 руб.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Кому положен стандартный вычет 216 рублей?</summary>
+      <p>Всем работникам, чей доход, подлежащий налогообложению, не превышает 1 308 руб. в месяц. Как только доход выше — вычет за этот месяц не предоставляется. Вычеты предоставляет наниматель по месту основной работы.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Как считается налог на сверхдоходы?</summary>
+      <p>По трёхступенчатой шкале к сумме превышения: 13% до 350 000 руб., 25% с 350 001 до 600 000 руб., 30% свыше 600 000 руб. за год. Доплата производится по декларации: подать до 31.03.2027, уплатить до 01.06.2027.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Что изменилось для самозанятых с 1 июля 2026 года?</summary>
+      <p>Введён минимальный ежемесячный платёж НПД — 45 руб. (18 руб. для пенсионеров). Он уплачивается независимо от фактического дохода, включая «нулевые» месяцы.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Касается ли прогрессивная шкала айтишников ПВТ?</summary>
+      <p>Нет. Доходы по трудовым договорам от резидентов ПВТ облагаются по ставке 13% и исключены из расчёта сверхдоходов (п. 5 ст. 6 Закона № 47-З от 13.12.2024).</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Где проверить официальные цифры?</summary>
+      <p>Первоисточник — сайт Министерства по налогам и сборам Республики Беларусь <a href="https://nalog.gov.by" rel="noopener" target="_blank">nalog.gov.by</a> и Национальный правовой интернет-портал <a href="https://pravo.by" rel="noopener" target="_blank">pravo.by</a>. Наш калькулятор носит справочный характер и не является офертой.</p>
+    </details>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p><b>Налоги·BY</b> — бесплатный справочный калькулятор. Данные актуальны на октябрь 2026 года (НК РБ, Закон № 127-З от 30.12.2025). Расчёты не являются юридической или бухгалтерской консультацией.</p>
+    <p class="footer-links">Источники: <a href="https://nalog.gov.by/individuals/income_taxation/tax_deductions/" rel="noopener" target="_blank">налоговые вычеты</a> · <a href="https://nalog.gov.by/professional_income_tax/" rel="noopener" target="_blank">НПД</a> · <a href="https://pravo.by" rel="noopener" target="_blank">pravo.by</a></p>
+  </div>
+</footer>
+
+<!-- YANDEX_METRIKA_PLACEHOLDER: вставьте сюда счётчик Метрики после регистрации на metrika.yandex.ru -->
+
+<script src="app.js"></script>
+</body>
+</html>
